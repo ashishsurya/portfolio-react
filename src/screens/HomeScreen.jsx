@@ -7,7 +7,58 @@ export default function HomeScreen() {
   return (
     <Fragment>
       <Hero />
+      <Skills />
     </Fragment>
+  );
+}
+
+function Skills() {
+  return (
+    <div className='grid place-items-center py-16'>
+      <h1 className='text-indigo-600 text-5xl md:text-7xl tracking-wider'>
+        Skills
+      </h1>
+      <div className='grid grid-cols-1 md:grid-cols-3 shadow-2xl rounded-lg p-5 gap-5 mt-4'>
+        <DetailedSkills
+          skills={[
+            'https://img.icons8.com/color/48/undefined/c-plus-plus-logo.png',
+            'https://img.icons8.com/color/48/undefined/python--v1.png',
+            'https://img.icons8.com/color/48/undefined/javascript--v1.png',
+          ]}
+          title='Programming Languages'
+        />
+        <DetailedSkills
+          title='Libraries / Frameworks'
+          skills={[
+            'https://img.icons8.com/color/48/undefined/react-native.png',
+            'https://img.icons8.com/color/48/undefined/nextjs.png',
+            'https://img.icons8.com/color/48/undefined/material-ui.png',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png',
+            'https://img.icons8.com/color/48/undefined/flask.png',
+          ]}
+        />
+        <DetailedSkills
+          title='Database / Querying Languages'
+          skills={[
+            'https://img.icons8.com/color/48/undefined/graphql.png',
+            'https://img.icons8.com/color/48/undefined/postgreesql.png',
+          ]}
+        />
+      </div>
+    </div>
+  );
+}
+
+function DetailedSkills({ title, skills }) {
+  return (
+    <div className='flex flex-col items-center gap-3'>
+      <h3>{title}</h3>
+      <div>
+        {skills?.map((skill) => (
+          <img src={skill} key={skill} alt='' className='w-[48px]' />
+        ))}
+      </div>
+    </div>
   );
 }
 
