@@ -12,7 +12,7 @@ const ProjectWrapper = ({ images, title, description, href, chips }) => {
       <div className='flex-1 p-3 flex flex-col'>
         <h1 className='text-indigo-600'>
           {title}{' '}
-          <a href={href} className='inline-block pl-1' target={"_blank"}>
+          <a href={href} className='inline-block pl-1' target={"_blank"} rel="noreferrer">
             <Icon path={mdiAttachment} size={1} />
           </a>
         </h1>
