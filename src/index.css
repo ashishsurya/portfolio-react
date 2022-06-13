@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@layer components{
-  
+@layer components {
+  .chip{
+    @apply  text-center text-xs w-max px-[7px] bg-indigo-300 text-indigo-500 rounded-lg cursor-pointer
+  }
 }
 
 @layer base {

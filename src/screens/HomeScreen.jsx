@@ -14,7 +14,7 @@ export default function HomeScreen() {
 
 function Skills() {
   return (
-    <div className='grid place-items-center py-16'>
+    <div className='grid place-items-center py-16' >
       <h1 className='text-indigo-600 text-5xl md:text-7xl tracking-wider'>
         Skills
       </h1>
@@ -42,6 +42,7 @@ function Skills() {
           skills={[
             'https://img.icons8.com/color/48/undefined/graphql.png',
             'https://img.icons8.com/color/48/undefined/postgreesql.png',
+            'https://img.icons8.com/color/48/undefined/mongodb.png',
           ]}
         />
       </div>
@@ -62,13 +63,18 @@ function DetailedSkills({ title, skills }) {
   );
 }
 
-function Hero() {
+function Hero( ) {
   return (
     <div className='grid place-items-center py-20 gap-4 bg-indigo-600 text-white'>
       <MetaData />
+      <p className='max-w-lg text-justify text-indigo-300 px-2'>
+        Currently in my final year of B.Tech ( CSE ) in Indian Institute of
+        Information Technology Kottayam . I'm having a good knowledge in Web
+        development and Data Structures{' '}
+        
+      </p>
+      <p className='animate-bounce text-lg'>Looking for internships</p>
       <HeroContactWrapper />
-      <p className='text-xl'>Full Stack Developer</p>
-      <p className='animate-bounce'>Currently looking for internships</p>
       {/* // eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a
         href=''
