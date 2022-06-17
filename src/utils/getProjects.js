@@ -100,7 +100,7 @@ export function getProjects() {
 
       This machine learning model will predict the total score of the cricket match based on a machine learning algorithm known as Linear Regression.
       `,
-      chips: ['Firebase', 'React', 'Speechify', 'react-chart-js'],
+      chips: ['Flask' , 'Bootstrap' , 'Scikit Learn' , 'Machine Learning'],
     },
   ];
 }

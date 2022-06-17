@@ -2,6 +2,7 @@
 import { Fragment } from 'react';
 import { mdiGithub, mdiEmail, mdiTwitter } from '@mdi/js';
 import Icon from '@mdi/react';
+import { motion } from 'framer-motion';
 
 export default function HomeScreen() {
   return (
@@ -14,7 +15,7 @@ export default function HomeScreen() {
 
 function Skills() {
   return (
-    <div className='grid place-items-center py-16' >
+    <div className='grid place-items-center py-16'>
       <h1 className='text-indigo-600 text-5xl md:text-7xl tracking-wider'>
         Skills
       </h1>
@@ -63,21 +64,25 @@ function DetailedSkills({ title, skills }) {
   );
 }
 
-function Hero( ) {
+function Hero() {
   return (
     <div className='grid place-items-center py-20 gap-4 bg-indigo-600 text-white'>
       <MetaData />
-      <p className='max-w-lg text-justify text-indigo-300 px-2'>
+      <motion.p
+        initial={{ y: 100, opacity: 0.1 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className='max-w-lg text-justify text-indigo-300 px-2'
+      >
         Currently in my final year of B.Tech ( CSE ) in Indian Institute of
         Information Technology Kottayam . I'm having a good knowledge in Web
         development and Data Structures{' '}
-        
-      </p>
+      </motion.p>
       <p className='animate-bounce text-lg'>Looking for internships</p>
       <HeroContactWrapper />
       {/* // eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a
-        href=''
+        href='https://drive.google.com/file/d/12oQldZr-1VDveU4CkqMgTizAyTg7a4-H/view?usp=sharing'
         className='bg-white text-indigo-600 px-3 py-4 rounded-2xl hover:scale-125 duration-500'
       >
         View My Resume
@@ -94,9 +99,22 @@ function MetaData() {
         alt='my-pic'
         className='rounded-full w-20 object-cover'
       />
-      <h2 className=''>Hi, I am 👋🏼</h2>
+      <motion.h2
+        initial={{ y: 100, opacity: 0.1 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Hi, I am 👋🏼
+      </motion.h2>
 
-      <h1 className='text-5xl md:text-7xl tracking-wider'>Surya Ashish</h1>
+      <motion.h1
+         initial={{ y: 100, opacity: 0.1 }}
+         animate={{ y: 0, opacity: 1 }}
+         transition={{ duration: 1 }}
+        className='text-5xl md:text-7xl tracking-wider'
+      >
+        Surya Ashish
+      </motion.h1>
     </Fragment>
   );
 }

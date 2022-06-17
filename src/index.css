@@ -6,14 +6,14 @@
 @tailwind utilities;
 
 @layer components {
-  .chip{
-    @apply  text-center text-xs w-max px-[7px] bg-indigo-300 text-indigo-500 rounded-lg cursor-pointer
+  .chip {
+    @apply text-center text-xs w-max px-[7px] bg-white text-indigo-500 rounded-lg cursor-pointer;
   }
 }
 
 @layer base {
   body {
-    @apply font-dm;
+    @apply font-dm ;
   }
 
   h1 {
