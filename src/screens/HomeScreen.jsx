@@ -131,7 +131,7 @@ function HeroContactWrapper() {
         path={mdiTwitter}
       />
       <SocialMediaIcon
-        href={'mailto:ashishsurya126@gmail.com'}
+        href={'mailto:ashishbvs009@gmail.com'}
         path={mdiEmail}
       />
     </div>
