@@ -8,21 +8,15 @@ export default function Navbar({ screen, setScreen }) {
     <nav className='flex items-center justify-evenly sm:justify-center gap-4 text-lg py-4 bg-indigo-600 text-white'>
       <p
         onClick={() => handleRouting(screen, 'home')}
-        className='cursor-pointer'
+        className='cursor-pointer uppercase text-sm tracking-widest'
       >
         Home
       </p>
       <p
         onClick={() => handleRouting(screen, 'projects')}
-        className='cursor-pointer'
+        className='cursor-pointer uppercase text-sm tracking-widest'
       >
         Projects
-      </p>
-      <p
-        onClick={() => handleRouting(screen, 'experience')}
-        className='cursor-pointer'
-      >
-        Experience
       </p>
     </nav>
   );
